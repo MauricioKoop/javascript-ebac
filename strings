@@ -1,0 +1,25 @@
+let nome = 'Eduardo';
+let sobrenome = 'Koop';
+let nomeSobreNome = nome + ' ' + sobrenome;
+console.log(nomeSobreNome);
+
+// .length: Retorna o comprimento da string.
+console.log('length: ' + nomeSobreNome.length);
+
+// .toUpperCase(): Converte a string para letras maiúsculas.
+console.log('toUpperCase(): '+ nomeSobreNome.toUpperCase());
+
+// .toLowerCase(): Converte a string para letras minúsculas.
+console.log('toLowerCase(): '+ nomeSobreNome.toLowerCase());
+
+// .indexOf(): Retorna a posição da primeira ocorrência de um determinado texto dentro da string.
+console.log('indexOf(): ' + nomeSobreNome.indexOf('Koop', 7));
+
+// .substring(): Extrai uma parte da string, especificando o índice de início e fim.
+console.log('substring(): ' + nomeSobreNome.substring(0, 7));
+
+// .replace(): Substitui uma parte da string por outra.
+console.log(nomeSobreNome.replace('Eduardo', 'Mauricio'));
+
+// Interpolação de Strings: Usando o operador ${} dentro de uma string delimitada por crases (``), podemos inserir valores de variáveis ou expressões JavaScript diretamente na string.
+console.log(`Meu nome completo é: Mauricio ${nome} ${sobrenome}`);
