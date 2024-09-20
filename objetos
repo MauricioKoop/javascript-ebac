@@ -1,0 +1,19 @@
+let moto = {
+    marca: "yamaha",
+    modelo: "mt-03",
+    ano: 2024
+}
+
+// Exibindo objeto
+console.log(moto.marca);
+console.log(moto.modelo);
+
+// Modificar
+moto.modelo = "fazer 250";
+
+// Adicionar
+moto["cor"] = "Verde";
+
+console.log(moto.ano);
+console.log(moto.cor);
+console.log(moto.modelo);
