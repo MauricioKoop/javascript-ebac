@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>DOM Aplicação</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1 id="titulo">Olá mundo!</h1>
+        <p class="descricao">Isso é uma página do DOM</p>
+        <button id="botao">Clique aqui para ativar</button>
+
+        <script>
+            // Seleção dos elementos a serem modificados
+            let titulo = document.getElementById('titulo');
+            let descricao = document.querySelector('.descricao');
+            let botao = document.getElementById('botao');
+
+            // Evento que acontece após o clique
+            botao.addEventListener('click', function(){
+                titulo.innerHTML = "O título do botão foi alterado";
+
+                descricao.innerHTML = "A descrição foi alterada";
+
+                titulo.classList.toggle('highlight');
+            })
+
+        </script>
+    </body>
+
+</html>
