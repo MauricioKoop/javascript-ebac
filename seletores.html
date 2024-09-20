@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title>Seletores</title>
+    </head>
+
+    <body>
+        <h1 id="titulo">Olá mundo!</h1>
+        <p class="descricao">Isso é uma página do DOM</p>
+        <p class="descricao">Isso é uma página do DOM</p>
+        <p class="descricao">Isso é uma página do DOM</p>
+        <h2>Subtítulo com tag H2</h2>
+        <h2>Outro Subtítulo com tag H2</h2>
+
+        
+
+        <script>
+            // Seletor por id
+            let titulo = document.getElementById('titulo');
+            titulo.style.backgroundColor = "orange";
+            titulo.style.color = "white";
+            console.log("Selecionado pelo seletor ID: " + titulo);
+
+            // Seletor querySelectorAll
+            let descricoes = document.querySelectorAll('.descricao');
+            descricoes.forEach(el => {
+                el.style.backgroundColor = "lightBlue";
+                console.log("Selecionado pelo seletor querySelectorAll: " + descricoes);
+            })
+
+            // Seletor por tag
+            let tag = document.querySelectorAll("h2");
+            tag.forEach(el => {
+                el.style.fontWeight = "bold";
+                el.style.fontSize = "30px";
+                el.style.color = "blue";
+                console.log(el);
+            })
+
+        </script>
+    </body>
+
+</html>
