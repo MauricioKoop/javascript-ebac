@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de scroll</title>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .box{
+            background: blue;
+            color: white;
+            padding: 50px;
+            margin: 50px 0;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" data-aos="fade-up">caixa 1</div>
+        <div class="box" data-aos="fade-right">caixa 2</div>
+        <div class="box" data-aos="fade-left">caixa 3</div>
+        <div class="box" data-aos="fade-down">caixa 4</div>
+        <div class="box" data-aos="fade-up">caixa 5</div>
+        <div class="box" data-aos="fade-right">caixa 6</div>
+        <div class="box" data-aos="fade-left">caixa 7</div>
+        <div class="box" data-aos="fade-down">caixa 8</div>
+        <div class="box" data-aos="fade-up">caixa 9</div>
+        <div class="box" data-aos="fade-right">caixa 10</div>
+        <div class="box" data-aos="fade-left">caixa 11</div>
+        <div class="box" data-aos="fade-down">caixa 12</div>
+    </div>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
