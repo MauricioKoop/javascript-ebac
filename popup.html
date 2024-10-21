@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Alert</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+
+    <button id="alertButton">Clique aqui para testar</button>
+
+    <script>
+        document.getElementById('alertButton').addEventListener('click', function(){
+            swal({
+                title: "Sweet Alert",
+                text: "Você clicou no botão",
+                icon: "success",
+                button: "fechar"
+            })
+        })
+    </script>
+    
+</body>
+</html>
