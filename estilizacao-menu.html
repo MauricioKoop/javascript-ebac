@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo menu com slideout.js</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.mins.css"> -->
+    <style>
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 256px;
+            background: #2e2e2e;
+            color: white;
+            z-index: 1;
+            transform: translateX(-100%);
+            transition: transform .3s ease;
+        }
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu ul li {
+            padding: 15px;
+            border-bottom: 1px solid #444;
+        }
+        .menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu.is-open {
+            transform: translateX(0);
+        }
+        .content {
+            padding: 20px;
+            transition: transform .3s ease;
+        }
+        .content.is-open {
+            transform: translateX(256px);
+        }
+        .toggle-button {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background: #2e2e2e;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js"></script> -->
+</head>
+<body>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </div>
+    <div class="content" id="content">
+        <div class="toggle-button" id="toggle-button">Menu</div>
+        <h1>Bem vindo ao nosso website</h1>
+        <p>Este é um exemplo de menu deslizante com slideout.js</p>
+    </div>
+
+    <script>
+        let menu = document.getElementById('menu');
+        let content = document.getElementById('content');
+        let toggleButton = document.getElementById('toggle-button');
+
+        toggleButton.addEventListener('click', function(){
+            menu.classList.toggle('is-open');
+            content.classList.toggle('is-open');
+        })
+    </script>
+</body>
+</html>
